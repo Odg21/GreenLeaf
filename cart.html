@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <link rel="icon" href="images/fevicon.png" type="image/gif" />
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>GreenLeaf</title>
+
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+  <!-- font awesome style -->
+  <link href="css/font-awesome.min.css" rel="stylesheet" />
+
+  <!-- Custom styles for this template -->
+  <link href="css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="css/responsive.css" rel="stylesheet" />
+  <style>
+  /* Search Bar Styles */
+  .search-container {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+  }
+  .search-input {
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 5px;
+    width: 300px;
+  }
+  .search-button {
+    background-color: orange;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  .search-button:hover {
+    background-color: #FF7043;
+  }
+  /* Shopping Cart Icon Styles */
+  .cart-icon {
+    margin-left: 50px;
+    position: relative;
+    font-size: 24px;
+    color: #333;
+    cursor: pointer;
+  }
+  .cart-icon:hover {
+    color: #FF5722;
+  }
+  .cart-count {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: #FF5722;
+    color: white;
+    border-radius: 50%;
+    padding: 4px;
+    font-size: 12px;
+  }
+</style>
+
+
+</head>
+
+<body>
+
+  <!-- header section strats -->
+  <header class="header_section header_inner">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg custom_nav-container ">
+        <a class="navbar-brand" href="index.html">
+          <span>GreenLeaf</span>
+        </a>
+         <!-- search -->
+        <input type="text" class="search-input" placeholder="Search...">
+        <button class="search-button">Search</button>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class=""> </span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav  ml-auto">
+            <li class="nav-item ">
+              <a class="nav-link" href="index.html">Home </a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link" href="about.html"> About </a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="fruit.html">Fruits <span class="sr-only">(current)</span> </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="blog.html">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact Us</a>
+            </li>
+            <!--Shoping Cart Icon -->
+        <div class="cart-icon">
+          <a href="cart.html">
+            <i class="fa fa-shopping-cart" aria-hidden="true" style="color: orange;"></i>
+          </a>
+        </div>
+        <!--End of shopping cart icon-->
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+</head>
+<body>
+
+<div class="navbar">
+    <a href="#special-offers">SPECIAL OFFERS</a>
+    <!-- Add other navigation items here -->
+</div>
+
+<div class="cart-item">
+    <img src="chayote-thumbnail.jpg" alt="Chayote">
+    <div class="cart-item-description">
+        <span>Chayote (Kg)</span>
+        <p>Fresh and delicious chayote for your recipes.</p>
+    </div>
+    <span>UGX 6,000</span>
+    <input type="number" value="1">
+    <span>Subtotal: UGX 6,000</span>
+    <span class="remove-item" onclick="removeItem(this)">Remove</span>
+</div>
+
+<!-- Add more cart items here -->
+
+<div class="cart-total">
+    <div>Subtotal: UGX 6,000</div>
+    <div>Shipping Fee: TBD</div>
+    <!-- Add total and checkout button here -->
+    <a href="#checkout">Checkout</a>
+</div>
+
+<script>
+    function removeItem(element) {
+        // Implement logic to remove the item from the cart
+        // You can update the subtotal and other totals here
+        // For now, let's just log a message
+        console.log("Item removed!");
+    }
+</script>
+
+</body>
+</html>

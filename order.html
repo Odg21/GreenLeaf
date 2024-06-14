@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order Form</title>
+  <style>
+    /* Style for the modal */
+    .modal {
+      display: none; /* Hidden by default */
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgb(0,0,0);
+      background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    }
+    /* Modal content */
+    .modal-content {
+      background-color: #fefefe;
+      margin: 15% auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%;
+      max-width: 400px;
+    }
+    /* Close button */
+    .close {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+    }
+    .close:hover,
+    .close:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    /* Form container inside modal */
+    .form-container {
+      background-color: orange;
+      padding: 20px;
+      border-radius: 5px;
+    }
+    input[type="text"], input[type="number"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+    input[type="submit"] {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      background-color: green;
+      color: #fff;
+      cursor: pointer;
+    }
+    .payment-message {
+      margin-top: 20px;
+      text-align: center;
+      color: green;
+    }
+    .success-message {
+      margin-top: 20px;
+      text-align: center;
+      color: green;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Trigger button -->
+  <button id="addToCartBtn">Add to Cart</button>
+
+  <!-- The Modal -->
+  <div id="orderModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div class="form-container">
+        <form id="orderForm">
+          <label for="product">Product:</label>
+          <input type="text" id="product" name="product" placeholder="Enter product name" required>
+    
+          <label for="quantity">Quantity:</label>
+          <input type="number" id="quantity" name="quantity" placeholder="Enter quantity" required>
+    
+          <label for="location">Location:</label>
+          <input type="text" id="location" name="location" placeholder="Enter your location" required>
+    
+          <label for="contact">Contact:</label>
+          <input type="text" id="contact" name="contact" placeholder="Enter your contact" required>
+    
+          <input type="submit" value="Submit Order">
+        </form>
+        
+        <div class="payment-message">
+          Payment is made on arrival of goods.
+        </div>
+    
+        <div class="success-message" id="successMessage">
+          Your order has been placed.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Get modal elements
+    var modal = document.getElementById('orderModal');
+    var btn = document.getElementById('addToCartBtn');
+    var span = document.getElementsByClassName('close')[0];
+    var orderForm = document.getElementById('orderForm');
+    var successMessage = document.getElementById('successMessage');
+
+    // When the user clicks the button, open the modal
+    btn.onclick = function() {
+      modal.style.display = 'block';
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+      modal.style.display = 'none';
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = 'none';
+      }
+    }
+
+    // Add submit event listener to the form
+    orderForm.addEventListener('submit', function(event) {
+      // Prevent the default form submission
+      event.preventDefault();
+      
+      // Show the success message
+      successMessage.style.display = 'block';
+      
+      // Hide the form fields
+      orderForm.style.display = 'none';
+    });
+  </script>
+
+</body>
+</html>

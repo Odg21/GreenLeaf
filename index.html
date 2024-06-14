@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <link rel="icon" href="images/fevicon.png" type="image/gif" />
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>GreenLeaf Farm Services</title>
+
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+  <!-- font awesome style -->
+  <link href="css/font-awesome.min.css" rel="stylesheet" />
+
+  <!-- Custom styles for this template -->
+  <link href="css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="css/responsive.css" rel="stylesheet" />
+  <title>Orange Banner</title>
+    <style>
+        /* Styles for the orange banner */
+        .banner {
+            background-color: orange;
+            color: white;
+            padding: 8px 16px; /* Reduced padding */
+            text-align: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+        }
+
+        /* Styles for the close button */
+        .close-btn {
+            color: white;
+            background-color: transparent;
+            border: none;
+            font-size: 16px; /* Reduced font size */
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 16px; /* Reduced right distance */
+        }
+
+        /* Style for the content within the banner */
+        .banner-content {
+            margin-top: 20px; /* Reduced margin-top */
+            font-size: 14px; /* Reduced font size */
+        }
+    </style>
+  <style>
+  /* Search Bar Styles */
+  .search-container {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+  }
+  .search-input {
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 5px;
+    width: 300px;
+  }
+  .search-button {
+    background-color: orange;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  .search-button:hover {
+    background-color: #FF7043;
+  }
+  /* Shopping Cart Icon Styles */
+  .cart-icon {
+    margin-left: 50px;
+    position: relative;
+    font-size: 24px;
+    color: #333;
+    cursor: pointer;
+  }
+  .cart-icon:hover {
+    color: #FF5722;
+  }
+  .cart-count {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: #FF5722;
+    color: white;
+    border-radius: 50%;
+    padding: 4px;
+    font-size: 12px;
+  }
+</style>
+
+
+</head>
+
+<body>
+<div class="banner">
+        <button class="close-btn" onclick="closeBanner()">×</button>
+        <div class="banner-content">
+            <p>Payments are to be made in person after goods have been received.</p>
+        </div>
+    </div>
+  <!-- header section strats -->
+  <header class="header_section">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg custom_nav-container ">
+        <a class="navbar-brand" href="index.html">
+          <span>GreenLeaf</span>
+        </a>
+
+       
+
+        <!-- search -->
+        <input type="text" class="search-input" placeholder="Search...">
+        <button class="search-button">Search</button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav  ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html"> About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="fruit.html">Fruits</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="blog.html">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact Us</a>
+            </li>
+          </ul>
+          <!--Shoping Cart Icon -->
+        <div class="cart-icon">
+          <a href="cart.html">
+            <i class="fa fa-shopping-cart" aria-hidden="true" style="color: orange;"></i>
+          </a>
+        </div>
+        <!--End of shopping cart icon-->
+        </div>
+      </nav>
+    </div>
+  </header>
+  <!-- end header section -->
+  <!-- slider section -->
+  <section class="slider_section ">
+    <div id="customCarousel1" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="container ">
+            <div class="row">
+              <div class="col-md-6 col-lg-5">
+                <div class="detail-box">
+                  <h1>
+                  At GreenLeaf, we believe your health is our pride!
+                  </h1>
+                  <p>
+                    We have your health at heart, this is why we go out of our way to source out fruits from the best of the best to provide our customers with rich natural taste and nutrient full farm products.
+                    Your health is our pride!</p>
+                  <div class="btn-box">
+                    <a href="importance.html" class="btn-1">
+                      Read More
+                    </a>
+                    <a href="contact.html" class="btn-2">
+                      Contact Us
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-7">
+                <div class="img-box">
+                  <img src="images/slider-img.png" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="container ">
+            <div class="row">
+              <div class="col-md-6 col-lg-5">
+                <div class="detail-box">
+                  <h1>
+                    We Sell The <br>
+                    Best Fruits
+                  </h1>
+                  <p>
+                    Beyond mere sustenance, we view fruits as nature's gift to wellness and vitality. Packed with essential vitamins, minerals, and antioxidants, they play a vital role in supporting a healthy lifestyle and boosting immunity. With each mouthful, you not only savor the taste but also reap the countless health benefits that fruits offer, promoting overall well-being and vitality.</p>
+                  <div class="btn-box">
+                    <a href="" class="btn-1">
+                      Read More
+                    </a>
+                    <a href="" class="btn-2">
+                      Contact Us
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-7">
+                <div class="img-box">
+                  <img src="images/best.jpg" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="container ">
+            <div class="row">
+              <div class="col-md-6 col-lg-5">
+                <div class="detail-box">
+                  <h1>
+                     <br>
+                    Your Path to Health & Culinary Delight!
+                  </h1>
+                  <p>
+                    In today's fast-paced world, it's easy to overlook the importance of incorporating fruits into our daily diet. However, we're here to remind you of the profound impact that a single fruit can have on your health. Whether enjoyed as a standalone snack, blended into smoothies, or incorporated into your favorite recipes, fruits offer endless possibilities for culinary exploration and nourishment. </p>
+                  <div class="btn-box">
+                    <a href="" class="btn-1">
+                      Read More
+                    </a>
+                    <a href="contact.html" class="btn-2">
+                      Contact Us
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-7">
+                <div class="img-box">
+                  <img src="images/slider-img.png" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <ol class="carousel-indicators">
+        <li data-target="#customCarousel1" data-slide-to="0" class="active"></li>
+        <li data-target="#customCarousel1" data-slide-to="1"></li>
+        <li data-target="#customCarousel1" data-slide-to="2"></li>
+      </ol>
+    </div>
+  </section>
+  <!-- end slider section -->
+
+  <!-- offer section -->
+
+  <section class="offer_section">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-7 px-0">
+          <div class="box offer-box1">
+            <img src="images/o1.jpg" alt="">
+            <div class="detail-box">
+              <h2>
+                Antioxidants
+              </h2>
+              <a href="order.html">
+                Shop Now
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-5 px-0">
+          <div class="box offer-box2">
+            <img src="images/o2.jpg" alt="">
+            <div class="detail-box">
+              <h2>
+                Vitamin C
+              </h2>
+              <a href="order.html">
+                Shop Now
+              </a>
+            </div>
+          </div>
+          <div class="box offer-box3">
+            <img src="images/o3.jpg" alt="">
+            <div class="detail-box">
+              <h2>
+                Rich in Nutrients!
+              </h2>
+              <a href="order.html">
+                Shop Now
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end offer section -->
+
+  <!-- product section -->
+
+  <section class="product_section layout_padding">
+    <div class="container">
+      <div class="heading_container heading_center">
+       <p style="color: green;"><b>Fruitopia</b></p>
+<p style="color: yellowgreen;">A Flavorful Journey Through Nature’s Bounty</p>
+<p style="color: yellowgreen;">Welcome to Fruitopia, where succulence meets nutrition, and every bite is a celebration of health! Our digital orchard is brimming with an array of fruits, each adorned with its unique flavor profile, vibrant hues, and a dash of sweetness. But that’s not all—here, we delve beyond taste; we explore the price tags and ratings that accompany these juicy gems.</p>
+      </div>
+      <div class="row">
+        <div class="col-sm-6 col-lg-4">
+          <div class="box">
+            <div class="img-box">
+              <img src="images/p1.png" alt="">
+            </div>
+            <div class="detail-box">
+              <span class="rating">
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star-half-o" aria-hidden="true"></i>
+              </span>
+              <a href="">
+                Orange
+              </a>
+              <div class="price_box">
+                <h6 class="price_heading">
+                  <span>Ugx.</span> 1,500
+                  <br>
+                  <button class="search-button">Add to cart</button></br>
+                </h6>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-4">
+          <div class="box">
+            <div class="img-box">
+              <img src="images/packet.jpg" alt="">
+            </div>
+            <div class="detail-box">
+              <span class="rating">
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star-half-o" aria-hidden="true"></i>
+              </span>
+              <a href="">
+                Strawberry
+              </a>
+              <div class="price_box">
+                <h6 class="price_heading">
+                  <span>Ugx.</span> 13,000
+                  <br>
+                  <button class="search-button">Add to cart</button></br>
+                </h6>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-4">
+          <div class="box">
+            <div class="img-box">
+              <img src="images/jackfruit.png" alt="">
+            </div>
+            <div class="detail-box">
+              <span class="rating">
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star-half-o" aria-hidden="true"></i>
+              </span>
+              <a href="">
+                Jackfruit
+              </a>
+              <div class="price_box">
+                <h6 class="price_heading">
+                  <span>Ugx.</span> 6,000
+                  <br>
+                  <button class="search-button">Add to cart</button></br>
+                </h6>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-4">
+          <div class="box">
+            <div class="img-box">
+              <img src="images/pineapples.jpg" alt="">
+            </div>
+            <div class="detail-box">
+              <span class="rating">
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star-half-o" aria-hidden="true"></i>
+              </span>
+              <a href="">
+                Pineapple
+              </a>
+              <div class="price_box">
+                <h6 class="price_heading">
+                  <span>Ugx.</span> 6,000
+                  <br>
+                  <button class="search-button">Add to cart</button></br>
+                </h6>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-4">
+          <div class="box">
+            <div class="img-box">
+              <img src="images/p5.png" alt="">
+            </div>
+            <div class="detail-box">
+              <span class="rating">
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star-half-o" aria-hidden="true"></i>
+              </span>
+              <a href="">
+                Banana Fingers
+              </a>
+              <div class="price_box">
+                <h6 class="price_heading">
+                  <span>Ugx.</span> 6,000
+                  <br>
+                  <button class="search-button">Add to cart</button></br>
+                </h6>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-4">
+          <div class="box">
+            <div class="img-box">
+              <img src="images/p6.png" alt="">
+            </div>
+            <div class="detail-box">
+              <span class="rating">
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star-half-o" aria-hidden="true"></i>
+              </span>
+              <a href="">
+                Apple
+              </a>
+              <div class="price_box">
+                <h6 class="price_heading">
+                  <span>Ugx.</span> 2,000
+                  <br>
+                  <button class="search-button">Add to cart</button></br>
+                </h6>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="btn-box">
+        <a href="fruit.html">
+          View All
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- end product section -->
+
+  <!-- about section -->
+
+  <section class="about_section layout_padding">
+    <div class="container  ">
+      <div class="row">
+        <div class="col-md-6 ">
+          <div class="img-box">
+            <img src="images/about-img.png" alt="">
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="detail-box">
+            <div class="heading_container">
+              <h2>
+                About Us
+              </h2>
+            </div>
+            <p>
+              Words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks </p>
+            <a href="">
+              Read More
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end about section -->
+
+  <!-- blog section -->
+
+  <section class="blog_section layout_padding">
+    <div class="container">
+      <div class="heading_container">
+        <h2>
+          Latest From Blog
+        </h2>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="box">
+            <div class="img-box">
+              <img src="images/b1.jpg" alt="">
+              <h4 class="blog_date">
+                29 <br>
+                June
+              </h4>
+            </div>
+            <div class="detail-box">
+              <h5>
+                Look even slightly believable. If you are
+              </h5>
+              <p>
+                alteration in some form, by injected humour, or randomised words which don't look even slightly believable.
+              </p>
+              <a href="">
+                Read More
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="box">
+            <div class="img-box">
+              <img src="images/b2.jpg" alt="">
+              <h4 class="blog_date">
+                28 <br>
+                June
+              </h4>
+            </div>
+            <div class="detail-box">
+              <h5>
+                Anything embarrassing hidden in the middle
+              </h5>
+              <p>
+                alteration in some form, by injected humour, or randomised words which don't look even slightly believable.
+              </p>
+              <a href="">
+                Read More
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end blog section -->
+
+  <!-- client section -->
+  <section class="client_section ">
+    <div class="container">
+      <div class="heading_container heading_center">
+        <h2>
+          Testimonial
+        </h2>
+        <p>
+          Even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to
+        </p>
+      </div>
+    </div>
+    <div class="container px-0">
+      <div id="customCarousel2" class="carousel  slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-10 mx-auto">
+                  <div class="box">
+                    <div class="img-box">
+                      <img src="images/client.jpg" alt="">
+                    </div>
+                    <div class="detail-box">
+                      <div class="client_info">
+                        <div class="client_name">
+                          <h5>
+                            Clary Kenton
+                          </h5>
+                          <h6>
+                            Customer
+                          </h6>
+                        </div>
+                        <i class="fa fa-quote-left" aria-hidden="true"></i>
+                      </div>
+                      <p>
+                        **
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-10 mx-auto">
+                  <div class="box">
+                    <div class="img-box">
+                      <img src="images/client.jpg" alt="">
+                    </div>
+                    <div class="detail-box">
+                      <div class="client_info">
+                        <div class="client_name">
+                          <h5>
+                            Clary Kenton
+                          </h5>
+                          <h6>
+                            Customer
+                          </h6>
+                        </div>
+                        <i class="fa fa-quote-left" aria-hidden="true"></i>
+                      </div>
+                      <p>
+                        *****
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-10 mx-auto">
+                  <div class="box">
+                    <div class="img-box">
+                      <img src="images/client.jpg" alt="">
+                    </div>
+                    <div class="detail-box">
+                      <div class="client_info">
+                        <div class="client_name">
+                          <h5>
+                            Clary Kenton
+                          </h5>
+                          <h6>
+                            Customer
+                          </h6>
+                        </div>
+                        <i class="fa fa-quote-left" aria-hidden="true"></i>
+                      </div>
+                      <p>
+                        *****
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel_btn-box">
+          <a class="carousel-control-prev" href="#customCarousel2" role="button" data-slide="prev">
+            <i class="fa fa-angle-left" aria-hidden="true"></i>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#customCarousel2" role="button" data-slide="next">
+            <i class="fa fa-angle-right" aria-hidden="true"></i>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end client section -->
+
+  <!-- contact section -->
+  <section class="contact_section layout_padding">
+    <div class="container">
+      <div class="heading_container heading_center">
+        <h2>Get In <span>Touch</span></h2>
+      </div>
+      <div class="row">
+        <div class="col-md-6 px-0">
+          <div class="form_container">
+            <form action="">
+              <div class="form-row">
+                <div class="form-group col">
+                  <input type="text" class="form-control" placeholder="Your Name" />
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group col">
+                  <input type="text" class="form-control" placeholder="Phone Number" />
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group col">
+                  <input type="email" class="form-control" placeholder="Email" />
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group col">
+                  <input type="text" class="message-box form-control" placeholder="Message" />
+                </div>
+              </div>
+              <div class="btn_box">
+                <button>
+                  SEND
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="col-md-6 px-0">
+          <div class="map_container">
+            <div class="map">
+              <div id="googleMap"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end contact section -->
+
+  <!-- info section -->
+
+  <section class="info_section ">
+    <div class="info_container ">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-9">
+            <div class="info_contact ">
+              <div class="row">
+                <div class="col-md-3">
+                  <a href="#" class="link-box">
+                    <i class="fa fa-map-marker" aria-hidden="true"></i>
+                    <span>
+                     <a href="https://mapcarta.com/25737908/Directions" target="_blank"><p style="color: white;">Ntinda (U)</p></a>
+                    </span>
+                  </a>
+                </div>
+                <div class="col-md-5">
+                  <a href="#" class="link-box">
+                    <i class="fa fa-phone" aria-hidden="true"></i>
+                    <span>
+                      <a href="tel:0788117747" target="_blank"><p style="color: white;">Call us at +256-788117747</p></a>
+                    </span>
+                  </a>
+                </div>
+                <div class="col-md-4">
+                  <a href="#" class="link-box">
+                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                    <span>
+                      <a href="mailto:Carlgerald6@gmail" target="_blank"><p style="color: white;">Email Us</p></a>
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-5  col-lg-3 mx-auto">
+            <div class="info_form ">
+              <form action="#">
+                <input type="email" placeholder="Enter Your Email" />
+                <button>
+                  <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="info_logo">
+          <a class="navbar-brand" href="index.html">
+            <span>
+             GreenLeaf
+            </span>
+          </a>
+        </div>
+        <div class="social-box">
+          <a href="https://www.facebook.com/profile.php?id=61558180586167" target="_blank">
+            <i class="fa fa-facebook" aria-hidden="true"></i>
+          </a>
+          </a>
+          <a href="https://www.instagram.com/fresh_farm_strawberry" target="_blank">
+            <i class="fa fa-instagram" aria-hidden="true"></i>
+          </a>
+         </i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end info section -->
+
+  <!-- footer section -->
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15958.976924448123!2d32.61556289999999!3d0.34917190000000153!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x177dbbcdb14c104f%3A0x6054a5fcf58fabbf!2sNtinda%2C%20Kampala!5e0!3m2!1sen!2sug!4v1712147266022!5m2!1sen!2sug" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+  <footer class="footer_section">
+    <div class="container">
+      <p>
+        &copy; <span id="displayYear"></span> All Rights Reserved By
+        <a href="https://html.design/">GreenLeaf</a>
+      </p>
+    </div>
+  </footer>
+  <!-- footer section -->
+
+  <!-- jQery -->
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <!-- bootstrap js -->
+  <script src="js/bootstrap.js"></script>
+  <!-- custom js -->
+  <script src="js/custom.js"></script>
+  <!-- Google Map -->
+  <!-- End Google Map -->
+ <script>
+        // Function to close the banner
+        function closeBanner() {
+            var banner = document.querySelector('.banner');
+            banner.style.display = 'none';
+        }
+    </script>
+</body>
+
+</html>

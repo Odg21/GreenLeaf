@@ -1,0 +1,2965 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <link rel="icon" href="images/fevicon.png" type="image/gif" />
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order Form</title>
+  <style>
+    /* Style for the modal */
+    .modal {
+      display: none; /* Hidden by default */
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgb(0,0,0);
+      background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    }
+    /* Modal content */
+    .modal-content {
+      background-color: #fefefe;
+      margin: 15% auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%;
+      max-width: 400px;
+    }
+    /* Close button */
+    .close {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+    }
+    .close:hover,
+    .close:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    /* Form container inside modal */
+    .form-container {
+      background-color: orange;
+      padding: 20px;
+      border-radius: 5px;
+    }
+    input[type="text"], input[type="number"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+    input[type="submit"] {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      background-color: green;
+      color: #fff;
+      cursor: pointer;
+    }
+    .payment-message {
+      margin-top: 20px;
+      text-align: center;
+      color: green;
+    }
+    .success-message {
+      margin-top: 20px;
+      text-align: center;
+      color: green;
+      display: none;
+    }
+  </style>
+
+  <title>GreenLeaf</title>
+
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+  <!-- font awesome style -->
+  <link href="css/font-awesome.min.css" rel="stylesheet" />
+
+  <!-- Custom styles for this template -->
+  <link href="css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="css/responsive.css" rel="stylesheet" />
+  <style>
+  /* Search Bar Styles */
+  .search-container {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+  }
+  .search-input {
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 5px;
+    width: 300px;
+  }
+  .search-button {
+    background-color: orange;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  .search-button:hover {
+    background-color: #FF7043;
+  }
+  /* Shopping Cart Icon Styles */
+  .cart-icon {
+    margin-left: 50px;
+    position: relative;
+    font-size: 24px;
+    color: #333;
+    cursor: pointer;
+  }
+  .cart-icon:hover {
+    color: #FF5722;
+  }
+  .cart-count {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: #FF5722;
+    color: white;
+    border-radius: 50%;
+    padding: 4px;
+    font-size: 12px;
+  }
+</style>
+
+
+</head>
+
+<body>
+
+  <!-- header section strats -->
+  <header class="header_section header_inner">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg custom_nav-container ">
+        <a class="navbar-brand" href="index.html">
+          <span>GreenLeaf</span>
+        </a>
+         <!-- search -->
+        <input type="text" class="search-input" placeholder="Search...">
+        <button class="search-button">Search</button>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class=""> </span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav  ml-auto">
+            <li class="nav-item ">
+              <a class="nav-link" href="index.html">Home </a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link" href="about.html"> About </a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="fruit.html">Fruits <span class="sr-only">(current)</span> </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="blog.html">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact Us</a>
+            </li>
+            <!--Shoping Cart Icon -->
+        <div class="cart-icon">
+          <a href="cart.html">
+            <i class="fa fa-shopping-cart" aria-hidden="true" style="color: orange;"></i>
+          </a>
+        </div>
+        <!--End of shopping cart icon-->
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <!-- end header section -->
+
+  <!-- product section -->
+
+  <section class="product_section layout_padding2-top layout_padding-bottom">
+    <div class="container">
+      <div class="heading_container heading_center">
+        <h2>
+       <p style="color: green;"> Fruitopia</p>
+        </h2>
+<p style="color: gold;">A Flavorful Journey Through Nature’s Bounty</p>
+<p style="color: green;">Welcome to Fruitopia, where succulence meets nutrition, and every bite is a celebration of health! Our digital orchard is brimming with an array of fruits, each adorned with its unique flavor profile, vibrant hues, and a dash of sweetness. But that’s not all—here, we delve beyond taste. We explore the price tags and ratings that accompany these juicy gems.
+Join us on this journey of flavor and wellness as we invite you to experience the joy of wholesome eating. With our commitment to quality, freshness, and customer satisfaction, we aim to redefine your perception of fruits and inspire you to make them an integral part of your daily routine. Come, explore our orchard of delights, and discover the transformative power of nature's bounty, one juicy fruit at a time."
+        </p>
+      </div>
+      <div class="row">
+        <div class="col-sm-6 col-lg-4">
+          <div class="box">
+            <div class="img-box">
+              <img src="images/p1.png" alt="">
+            </div>
+            <div class="detail-box">
+              <span class="rating">
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star-half-o" aria-hidden="true"></i>
+              </span>
+              <a href="">
+                Orange
+              </a>
+              <div class="price_box">
+                <h6 class="price_heading">
+                  <span>Ugx.</span> 1500
+                  <br>
+                   <!-- Trigger button -->
+  <button id="addToCartBtn24">Add to Cart</button>
+
+  <!-- The Modal -->
+  <div id="orderModal24" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div class="form-container">
+        <form id="orderForm24">
+          <label for="product">Product:</label>
+          <input type="text" id="product" name="product" placeholder="Enter product name" required>
+    
+          <label for="quantity">Quantity:</label>
+          <input type="number" id="quantity" name="quantity" placeholder="Enter quantity" required>
+    
+          <label for="location">Location:</label>
+          <input type="text" id="location" name="location" placeholder="Enter your location" required>
+    
+          <label for="contact">Contact:</label>
+          <input type="text" id="contact" name="contact" placeholder="Enter your contact" required>
+    
+          <input type="submit" value="Submit Order">
+        </form>
+        
+        <div class="payment-message">
+          Payment is made on arrival of goods.
+        </div>
+    
+        <div class="success-message" id="successMessage">
+          Your order has been placed.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Get modal elements
+    var modal = document.getElementById('orderModal24');
+    var btn = document.getElementById('addToCartBtn24');
+    var span = document.getElementsByClassName('close')[0];
+    var orderForm = document.getElementById('orderForm24');
+    var successMessage = document.getElementById('successMessage');
+
+    // When the user clicks the button, open the modal
+    btn.onclick = function() {
+      modal.style.display = 'block';
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+      modal.style.display = 'none';
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = 'none';
+      }
+    }
+
+    // Add submit event listener to the form
+    orderForm.addEventListener('submit', function(event) {
+      // Prevent the default form submission
+      event.preventDefault();
+      
+      // Show the success message
+      successMessage.style.display = 'block';
+      
+      // Hide the form fields
+      orderForm.style.display = 'none';
+    });
+  </script>
+                </h6>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-4">
+          <div class="box">
+            <div class="img-box">
+             <img src="images/packet.jpg" alt="">
+            </div>
+            <div class="detail-box">
+              <span class="rating">
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star-half-o" aria-hidden="true"></i>
+              </span>
+              <a href="">
+                Strawberry
+              </a>
+              <div class="price_box">
+                <h6 class="price_heading">
+                  <span>Ugx.</span>13,000
+                  <br>
+                   <!-- Trigger button -->
+  <button id="addToCartBtn23">Add to Cart</button>
+
+  <!-- The Modal -->
+  <div id="orderModal23" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div class="form-container">
+        <form id="orderForm23">
+          <label for="product">Product:</label>
+          <input type="text" id="product" name="product" placeholder="Enter product name" required>
+    
+          <label for="quantity">Quantity:</label>
+          <input type="number" id="quantity" name="quantity" placeholder="Enter quantity" required>
+    
+          <label for="location">Location:</label>
+          <input type="text" id="location" name="location" placeholder="Enter your location" required>
+    
+          <label for="contact">Contact:</label>
+          <input type="text" id="contact" name="contact" placeholder="Enter your contact" required>
+    
+          <input type="submit" value="Submit Order">
+        </form>
+        
+        <div class="payment-message">
+          Payment is made on arrival of goods.
+        </div>
+    
+        <div class="success-message" id="successMessage">
+          Your order has been placed.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Get modal elements
+    var modal = document.getElementById('orderModal23');
+    var btn = document.getElementById('addToCartBtn23');
+    var span = document.getElementsByClassName('close')[0];
+    var orderForm = document.getElementById('orderForm23');
+    var successMessage = document.getElementById('successMessage');
+
+    // When the user clicks the button, open the modal
+    btn.onclick = function() {
+      modal.style.display = 'block';
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+      modal.style.display = 'none';
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = 'none';
+      }
+    }
+
+    // Add submit event listener to the form
+    orderForm.addEventListener('submit', function(event) {
+      // Prevent the default form submission
+      event.preventDefault();
+      
+      // Show the success message
+      successMessage.style.display = 'block';
+      
+      // Hide the form fields
+      orderForm.style.display = 'none';
+    });
+  </script>
+                </h6>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-4">
+          <div class="box">
+            <div class="img-box">
+              <img src="images/jackfruit.png" alt="">
+            </div>
+            <div class="detail-box">
+              <span class="rating">
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star-half-o" aria-hidden="true"></i>
+              </span>
+              <a href="">
+                Jackfruit
+              </a>
+              <div class="price_box">
+                <h6 class="price_heading">
+                  <span>Ugx.</span> 6,000
+                  <br>
+                   <!-- Trigger button -->
+  <button id="addToCartBtn">Add to Cart</button>
+
+  <!-- The Modal -->
+  <div id="orderModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div class="form-container">
+        <form id="orderForm">
+          <label for="product">Product:</label>
+          <input type="text" id="product" name="product" placeholder="Enter product name" required>
+    
+          <label for="quantity">Quantity:</label>
+          <input type="number" id="quantity" name="quantity" placeholder="Enter quantity" required>
+    
+          <label for="location">Location:</label>
+          <input type="text" id="location" name="location" placeholder="Enter your location" required>
+    
+          <label for="contact">Contact:</label>
+          <input type="text" id="contact" name="contact" placeholder="Enter your contact" required>
+    
+          <input type="submit" value="Submit Order">
+        </form>
+        
+        <div class="payment-message">
+          Payment is made on arrival of goods.
+        </div>
+    
+        <div class="success-message" id="successMessage">
+          Your order has been placed.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Get modal elements
+    var modal = document.getElementById('orderModal25');
+    var btn = document.getElementById('addToCartBtn25');
+    var span = document.getElementsByClassName('close')[0];
+    var orderForm = document.getElementById('orderForm25');
+    var successMessage = document.getElementById('successMessage');
+
+    // When the user clicks the button, open the modal
+    btn.onclick = function() {
+      modal.style.display = 'block';
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+      modal.style.display = 'none';
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = 'none';
+      }
+    }
+
+    // Add submit event listener to the form
+    orderForm.addEventListener('submit', function(event) {
+      // Prevent the default form submission
+      event.preventDefault();
+      
+      // Show the success message
+      successMessage.style.display = 'block';
+      
+      // Hide the form fields
+      orderForm.style.display = 'none';
+    });
+  </script>
+                </h6>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-4">
+          <div class="box">
+            <div class="img-box">
+              <img src="images/pineapples.jpg" alt="">
+            </div>
+            <div class="detail-box">
+              <span class="rating">
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star-half-o" aria-hidden="true"></i>
+              </span>
+              <a href="">
+                PineApple
+              </a>
+              <div class="price_box">
+                <h6 class="price_heading">
+                  <span>Ugx</span> 6,000
+                  <br>
+                   <!-- Trigger button -->
+  <button id="addToCartBtn22">Add to Cart</button>
+
+  <!-- The Modal -->
+  <div id="orderModal22" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div class="form-container">
+        <form id="orderForm22">
+          <label for="product">Product:</label>
+          <input type="text" id="product" name="product" placeholder="Enter product name" required>
+    
+          <label for="quantity">Quantity:</label>
+          <input type="number" id="quantity" name="quantity" placeholder="Enter quantity" required>
+    
+          <label for="location">Location:</label>
+          <input type="text" id="location" name="location" placeholder="Enter your location" required>
+    
+          <label for="contact">Contact:</label>
+          <input type="text" id="contact" name="contact" placeholder="Enter your contact" required>
+    
+          <input type="submit" value="Submit Order">
+        </form>
+        
+        <div class="payment-message">
+          Payment is made on arrival of goods.
+        </div>
+    
+        <div class="success-message" id="successMessage">
+          Your order has been placed.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Get modal elements
+    var modal = document.getElementById('orderModal22');
+    var btn = document.getElementById('addToCartBtn22');
+    var span = document.getElementsByClassName('close')[0];
+    var orderForm = document.getElementById('orderForm22');
+    var successMessage = document.getElementById('successMessage');
+
+    // When the user clicks the button, open the modal
+    btn.onclick = function() {
+      modal.style.display = 'block';
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+      modal.style.display = 'none';
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = 'none';
+      }
+    }
+
+    // Add submit event listener to the form
+    orderForm.addEventListener('submit', function(event) {
+      // Prevent the default form submission
+      event.preventDefault();
+      
+      // Show the success message
+      successMessage.style.display = 'block';
+      
+      // Hide the form fields
+      orderForm.style.display = 'none';
+    });
+  </script>
+                </h6>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-4">
+          <div class="box">
+            <div class="img-box">
+              <img src="images/pear.jpg" alt="">
+            </div>
+            <div class="detail-box">
+              <span class="rating">
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star-half-o" aria-hidden="true"></i>
+              </span>
+              <a href="">
+              Pears
+              </a>
+              <div class="price_box">
+                <h6 class="price_heading">
+                  <span>Ugx.</span> 6,000
+                  <br>
+                   <!-- Trigger button -->
+  <button id="addToCartBtn21">Add to Cart</button>
+
+  <!-- The Modal -->
+  <div id="orderModal21" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div class="form-container">
+        <form id="orderForm21">
+          <label for="product">Product:</label>
+          <input type="text" id="product" name="product" placeholder="Enter product name" required>
+    
+          <label for="quantity">Quantity:</label>
+          <input type="number" id="quantity" name="quantity" placeholder="Enter quantity" required>
+    
+          <label for="location">Location:</label>
+          <input type="text" id="location" name="location" placeholder="Enter your location" required>
+    
+          <label for="contact">Contact:</label>
+          <input type="text" id="contact" name="contact" placeholder="Enter your contact" required>
+    
+          <input type="submit" value="Submit Order">
+        </form>
+        
+        <div class="payment-message">
+          Payment is made on arrival of goods.
+        </div>
+    
+        <div class="success-message" id="successMessage">
+          Your order has been placed.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Get modal elements
+    var modal = document.getElementById('orderModal21');
+    var btn = document.getElementById('addToCartBtn21');
+    var span = document.getElementsByClassName('close')[0];
+    var orderForm = document.getElementById('orderForm21');
+    var successMessage = document.getElementById('successMessage');
+
+    // When the user clicks the button, open the modal
+    btn.onclick = function() {
+      modal.style.display = 'block';
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+      modal.style.display = 'none';
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = 'none';
+      }
+    }
+
+    // Add submit event listener to the form
+    orderForm.addEventListener('submit', function(event) {
+      // Prevent the default form submission
+      event.preventDefault();
+      
+      // Show the success message
+      successMessage.style.display = 'block';
+      
+      // Hide the form fields
+      orderForm.style.display = 'none';
+    });
+  </script>
+
+                </h6>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-4">
+          <div class="box">
+            <div class="img-box">
+              <img src="images/p6.png" alt="">
+            </div>
+            <div class="detail-box">
+              <span class="rating">
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star-half-o" aria-hidden="true"></i>
+              </span>
+              <a href="">
+                Apple
+              </a>
+              <div class="price_box">
+                <h6 class="price_heading">
+                  <span>Ugx.</span> 2,000
+                  <br>
+                   <!-- Trigger button -->
+  <button id="addToCartBtn20">Add to Cart</button>
+
+  <!-- The Modal -->
+  <div id="orderModal20" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div class="form-container">
+        <form id="orderForm20">
+          <label for="product">Product:</label>
+          <input type="text" id="product" name="product" placeholder="Enter product name" required>
+    
+          <label for="quantity">Quantity:</label>
+          <input type="number" id="quantity" name="quantity" placeholder="Enter quantity" required>
+    
+          <label for="location">Location:</label>
+          <input type="text" id="location" name="location" placeholder="Enter your location" required>
+    
+          <label for="contact">Contact:</label>
+          <input type="text" id="contact" name="contact" placeholder="Enter your contact" required>
+    
+          <input type="submit" value="Submit Order">
+        </form>
+        
+        <div class="payment-message">
+          Payment is made on arrival of goods.
+        </div>
+    
+        <div class="success-message" id="successMessage">
+          Your order has been placed.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Get modal elements
+    var modal = document.getElementById('orderModal20');
+    var btn = document.getElementById('addToCartBtn20');
+    var span = document.getElementsByClassName('close')[0];
+    var orderForm = document.getElementById('orderForm20');
+    var successMessage = document.getElementById('successMessage');
+
+    // When the user clicks the button, open the modal
+    btn.onclick = function() {
+      modal.style.display = 'block';
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+      modal.style.display = 'none';
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = 'none';
+      }
+    }
+
+    // Add submit event listener to the form
+    orderForm.addEventListener('submit', function(event) {
+      // Prevent the default form submission
+      event.preventDefault();
+      
+      // Show the success message
+      successMessage.style.display = 'block';
+      
+      // Hide the form fields
+      orderForm.style.display = 'none';
+    });
+  </script>
+
+                </h6>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+        <div class="row">
+        <div class="col-sm-6 col-lg-4">
+          <div class="box">
+            <div class="img-box">
+              <img src="images/Tamarind.jpg" alt="">
+            </div>
+            <div class="detail-box">
+              <span class="rating">
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star-half-o" aria-hidden="true"></i>
+              </span>
+              <a href="">
+              Tamarind
+              </a>
+              <div class="price_box">
+                <h6 class="price_heading">
+                  <span>Ugx.</span> 4,000
+                  <br>
+                   <!-- Trigger button -->
+  <button id="addToCartBtn19">Add to Cart</button>
+
+  <!-- The Modal -->
+  <div id="orderModal19" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div class="form-container">
+        <form id="orderForm19">
+          <label for="product">Product:</label>
+          <input type="text" id="product" name="product" placeholder="Enter product name" required>
+    
+          <label for="quantity">Quantity:</label>
+          <input type="number" id="quantity" name="quantity" placeholder="Enter quantity" required>
+    
+          <label for="location">Location:</label>
+          <input type="text" id="location" name="location" placeholder="Enter your location" required>
+    
+          <label for="contact">Contact:</label>
+          <input type="text" id="contact" name="contact" placeholder="Enter your contact" required>
+    
+          <input type="submit" value="Submit Order">
+        </form>
+        
+        <div class="payment-message">
+          Payment is made on arrival of goods.
+        </div>
+    
+        <div class="success-message" id="successMessage">
+          Your order has been placed.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Get modal elements
+    var modal = document.getElementById('orderModal19');
+    var btn = document.getElementById('addToCartBtn19');
+    var span = document.getElementsByClassName('close')[0];
+    var orderForm = document.getElementById('orderForm19');
+    var successMessage = document.getElementById('successMessage');
+
+    // When the user clicks the button, open the modal
+    btn.onclick = function() {
+      modal.style.display = 'block';
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+      modal.style.display = 'none';
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = 'none';
+      }
+    }
+
+    // Add submit event listener to the form
+    orderForm.addEventListener('submit', function(event) {
+      // Prevent the default form submission
+      event.preventDefault();
+      
+      // Show the success message
+      successMessage.style.display = 'block';
+      
+      // Hide the form fields
+      orderForm.style.display = 'none';
+    });
+  </script>
+
+                </h6>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-4">
+          <div class="box">
+            <div class="img-box">
+              <img src="images/o3.jpg" alt="">
+            </div>
+            <div class="detail-box">
+              <span class="rating">
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star-half-o" aria-hidden="true"></i>
+              </span>
+              <a href="">
+              Pawpaw
+              </a>
+              <div class="price_box">
+                <h6 class="price_heading">
+                  <span>Ugx.</span> 6,000
+                  <br>
+                   <!-- Trigger button -->
+  <button id="addToCartBtn18">Add to Cart</button>
+
+  <!-- The Modal -->
+  <div id="orderModal18" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div class="form-container">
+        <form id="orderForm18">
+          <label for="product">Product:</label>
+          <input type="text" id="product" name="product" placeholder="Enter product name" required>
+    
+          <label for="quantity">Quantity:</label>
+          <input type="number" id="quantity" name="quantity" placeholder="Enter quantity" required>
+    
+          <label for="location">Location:</label>
+          <input type="text" id="location" name="location" placeholder="Enter your location" required>
+    
+          <label for="contact">Contact:</label>
+          <input type="text" id="contact" name="contact" placeholder="Enter your contact" required>
+    
+          <input type="submit" value="Submit Order">
+        </form>
+        
+        <div class="payment-message">
+          Payment is made on arrival of goods.
+        </div>
+    
+        <div class="success-message" id="successMessage">
+          Your order has been placed.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Get modal elements
+    var modal = document.getElementById('orderModal18');
+    var btn = document.getElementById('addToCartBtn18');
+    var span = document.getElementsByClassName('close')[0];
+    var orderForm = document.getElementById('orderForm18');
+    var successMessage = document.getElementById('successMessage');
+
+    // When the user clicks the button, open the modal
+    btn.onclick = function() {
+      modal.style.display = 'block';
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+      modal.style.display = 'none';
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = 'none';
+      }
+    }
+
+    // Add submit event listener to the form
+    orderForm.addEventListener('submit', function(event) {
+      // Prevent the default form submission
+      event.preventDefault();
+      
+      // Show the success message
+      successMessage.style.display = 'block';
+      
+      // Hide the form fields
+      orderForm.style.display = 'none';
+    });
+  </script>
+
+                </h6>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-4">
+          <div class="box">
+            <div class="img-box">
+              <img src="images/mellons.jpg" alt="">
+            </div>
+            <div class="detail-box">
+              <span class="rating">
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star-half-o" aria-hidden="true"></i>
+              </span>
+              <a href="">
+              Black Watermellon
+              </a>
+              <div class="price_box">
+                <h6 class="price_heading">
+                  <span>Ugx.</span> 6,000
+                  <br>
+                   <!-- Trigger button -->
+  <button id="addToCartBtn17">Add to Cart</button>
+
+  <!-- The Modal -->
+  <div id="orderModal17" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div class="form-container">
+        <form id="orderForm17">
+          <label for="product">Product:</label>
+          <input type="text" id="product" name="product" placeholder="Enter product name" required>
+    
+          <label for="quantity">Quantity:</label>
+          <input type="number" id="quantity" name="quantity" placeholder="Enter quantity" required>
+    
+          <label for="location">Location:</label>
+          <input type="text" id="location" name="location" placeholder="Enter your location" required>
+    
+          <label for="contact">Contact:</label>
+          <input type="text" id="contact" name="contact" placeholder="Enter your contact" required>
+    
+          <input type="submit" value="Submit Order">
+        </form>
+        
+        <div class="payment-message">
+          Payment is made on arrival of goods.
+        </div>
+    
+        <div class="success-message" id="successMessage">
+          Your order has been placed.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Get modal elements
+    var modal = document.getElementById('orderModal17');
+    var btn = document.getElementById('addToCartBtn17');
+    var span = document.getElementsByClassName('close')[0];
+    var orderForm = document.getElementById('orderForm17');
+    var successMessage = document.getElementById('successMessage');
+
+    // When the user clicks the button, open the modal
+    btn.onclick = function() {
+      modal.style.display = 'block';
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+      modal.style.display = 'none';
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = 'none';
+      }
+    }
+
+    // Add submit event listener to the form
+    orderForm.addEventListener('submit', function(event) {
+      // Prevent the default form submission
+      event.preventDefault();
+      
+      // Show the success message
+      successMessage.style.display = 'block';
+      
+      // Hide the form fields
+      orderForm.style.display = 'none';
+    });
+  </script>
+
+                </h6>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-4">
+          <div class="box">
+            <div class="img-box">
+              <img src="images/passion.jpg" alt="">
+            </div>
+            <div class="detail-box">
+              <span class="rating">
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star-half-o" aria-hidden="true"></i>
+              </span>
+              <a href="">
+              Passion Fruits
+              </a>
+              <div class="price_box">
+                <h6 class="price_heading">
+                  <span>Ugx.</span> 10,500
+                  <br>
+                   <!-- Trigger button -->
+  <button id="addToCartBtn16">Add to Cart</button>
+
+  <!-- The Modal -->
+  <div id="orderModal16" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div class="form-container">
+        <form id="orderForm16">
+          <label for="product">Product:</label>
+          <input type="text" id="product" name="product" placeholder="Enter product name" required>
+    
+          <label for="quantity">Quantity:</label>
+          <input type="number" id="quantity" name="quantity" placeholder="Enter quantity" required>
+    
+          <label for="location">Location:</label>
+          <input type="text" id="location" name="location" placeholder="Enter your location" required>
+    
+          <label for="contact">Contact:</label>
+          <input type="text" id="contact" name="contact" placeholder="Enter your contact" required>
+    
+          <input type="submit" value="Submit Order">
+        </form>
+        
+        <div class="payment-message">
+          Payment is made on arrival of goods.
+        </div>
+    
+        <div class="success-message" id="successMessage">
+          Your order has been placed.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Get modal elements
+    var modal = document.getElementById('orderModal16');
+    var btn = document.getElementById('addToCartBtn16');
+    var span = document.getElementsByClassName('close')[0];
+    var orderForm = document.getElementById('orderForm16');
+    var successMessage = document.getElementById('successMessage');
+
+    // When the user clicks the button, open the modal
+    btn.onclick = function() {
+      modal.style.display = 'block';
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+      modal.style.display = 'none';
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = 'none';
+      }
+    }
+
+    // Add submit event listener to the form
+    orderForm.addEventListener('submit', function(event) {
+      // Prevent the default form submission
+      event.preventDefault();
+      
+      // Show the success message
+      successMessage.style.display = 'block';
+      
+      // Hide the form fields
+      orderForm.style.display = 'none';
+    });
+  </script>
+
+                </h6>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-4">
+          <div class="box">
+            <div class="img-box">
+              <img src="images/avocado.jpg" alt="">
+            </div>
+            <div class="detail-box">
+              <span class="rating">
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star-half-o" aria-hidden="true"></i>
+              </span>
+              <a href="">
+              Avocado
+              </a>
+              <div class="price_box">
+                <h6 class="price_heading">
+                  <span>Ugx.</span> 6,000
+                  <br>
+        <!-- Trigger button -->
+  <button id="addToCartBtn15">Add to Cart</button>
+
+  <!-- The Modal -->
+  <div id="orderModal15" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div class="form-container">
+        <form id="orderForm15">
+          <label for="product">Product:</label>
+          <input type="text" id="product" name="product" placeholder="Enter product name" required>
+    
+          <label for="quantity">Quantity:</label>
+          <input type="number" id="quantity" name="quantity" placeholder="Enter quantity" required>
+    
+          <label for="location">Location:</label>
+          <input type="text" id="location" name="location" placeholder="Enter your location" required>
+    
+          <label for="contact">Contact:</label>
+          <input type="text" id="contact" name="contact" placeholder="Enter your contact" required>
+    
+          <input type="submit" value="Submit Order">
+        </form>
+        
+        <div class="payment-message">
+          Payment is made on arrival of goods.
+        </div>
+    
+        <div class="success-message" id="successMessage">
+          Your order has been placed.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Get modal elements
+    var modal = document.getElementById('orderModal15');
+    var btn = document.getElementById('addToCartBtn15');
+    var span = document.getElementsByClassName('close')[0];
+    var orderForm = document.getElementById('orderForm15');
+    var successMessage = document.getElementById('successMessage');
+
+    // When the user clicks the button, open the modal
+    btn.onclick = function() {
+      modal.style.display = 'block';
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+      modal.style.display = 'none';
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = 'none';
+      }
+    }
+
+    // Add submit event listener to the form
+    orderForm.addEventListener('submit', function(event) {
+      // Prevent the default form submission
+      event.preventDefault();
+      
+      // Show the success message
+      successMessage.style.display = 'block';
+      
+      // Hide the form fields
+      orderForm.style.display = 'none';
+    });
+  </script>
+
+                </h6>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-4">
+          <div class="box">
+            <div class="img-box">
+              <img src="images/grapes.jpg" alt="">
+            </div>
+            <div class="detail-box">
+              <span class="rating">
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star-half-o" aria-hidden="true"></i>
+              </span>
+              <a href="">
+              Red Grapes
+              </a>
+              <div class="price_box">
+                <h6 class="price_heading">
+                  <span>Ugx.</span> 6,000
+                  <br>
+                   <!-- Trigger button -->
+  <button id="addToCartBtn16">Add to Cart</button>
+
+  <!-- The Modal -->
+  <div id="orderModal16" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div class="form-container">
+        <form id="orderForm16">
+          <label for="product">Product:</label>
+          <input type="text" id="product" name="product" placeholder="Enter product name" required>
+    
+          <label for="quantity">Quantity:</label>
+          <input type="number" id="quantity" name="quantity" placeholder="Enter quantity" required>
+    
+          <label for="location">Location:</label>
+          <input type="text" id="location" name="location" placeholder="Enter your location" required>
+    
+          <label for="contact">Contact:</label>
+          <input type="text" id="contact" name="contact" placeholder="Enter your contact" required>
+    
+          <input type="submit" value="Submit Order">
+        </form>
+        
+        <div class="payment-message">
+          Payment is made on arrival of goods.
+        </div>
+    
+        <div class="success-message" id="successMessage">
+          Your order has been placed.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Get modal elements
+    var modal = document.getElementById('orderModal16');
+    var btn = document.getElementById('addToCartBtn16');
+    var span = document.getElementsByClassName('close')[0];
+    var orderForm = document.getElementById('orderForm16');
+    var successMessage = document.getElementById('successMessage');
+
+    // When the user clicks the button, open the modal
+    btn.onclick = function() {
+      modal.style.display = 'block';
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+      modal.style.display = 'none';
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = 'none';
+      }
+    }
+
+    // Add submit event listener to the form
+    orderForm.addEventListener('submit', function(event) {
+      // Prevent the default form submission
+      event.preventDefault();
+      
+      // Show the success message
+      successMessage.style.display = 'block';
+      
+      // Hide the form fields
+      orderForm.style.display = 'none';
+    });
+  </script>
+
+                </h6>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-4">
+          <div class="box">
+            <div class="img-box">
+              <img src="images/greengrapes.jpg" alt="">
+            </div>
+            <div class="detail-box">
+              <span class="rating">
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star-half-o" aria-hidden="true"></i>
+              </span>
+              <a href="">
+              Green Grapes
+              </a>
+              <div class="price_box">
+                <h6 class="price_heading">
+                  <span>Ugx.</span> 6,000
+                  <br>
+                   <!-- Trigger button -->
+  <button id="addToCartBtn15">Add to Cart</button>
+
+  <!-- The Modal -->
+  <div id="orderModal15" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div class="form-container">
+        <form id="orderForm13">
+          <label for="product">Product:</label>
+          <input type="text" id="product" name="product" placeholder="Enter product name" required>
+    
+          <label for="quantity">Quantity:</label>
+          <input type="number" id="quantity" name="quantity" placeholder="Enter quantity" required>
+    
+          <label for="location">Location:</label>
+          <input type="text" id="location" name="location" placeholder="Enter your location" required>
+    
+          <label for="contact">Contact:</label>
+          <input type="text" id="contact" name="contact" placeholder="Enter your contact" required>
+    
+          <input type="submit" value="Submit Order">
+        </form>
+        
+        <div class="payment-message">
+          Payment is made on arrival of goods.
+        </div>
+    
+        <div class="success-message" id="successMessage">
+          Your order has been placed.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Get modal elements
+    var modal = document.getElementById('orderModal15');
+    var btn = document.getElementById('addToCartBtn15');
+    var span = document.getElementsByClassName('close')[0];
+    var orderForm = document.getElementById('orderForm15');
+    var successMessage = document.getElementById('successMessage');
+
+    // When the user clicks the button, open the modal
+    btn.onclick = function() {
+      modal.style.display = 'block';
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+      modal.style.display = 'none';
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = 'none';
+      }
+    }
+
+    // Add submit event listener to the form
+    orderForm.addEventListener('submit', function(event) {
+      // Prevent the default form submission
+      event.preventDefault();
+      
+      // Show the success message
+      successMessage.style.display = 'block';
+      
+      // Hide the form fields
+      orderForm.style.display = 'none';
+    });
+  </script>
+
+                </h6>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-4">
+          <div class="box">
+            <div class="img-box">
+              <img src="images/coconut.jpeg" alt="">
+            </div>
+            <div class="detail-box">
+              <span class="rating">
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star-half-o" aria-hidden="true"></i>
+              </span>
+              <a href="">
+              Coconut
+              </a>
+              <div class="price_box">
+                <h6 class="price_heading">
+                  <span>Ugx.</span> 6,000
+                  <br>
+                   <!-- Trigger button -->
+  <button id="addToCartBtn">Add to Cart</button>
+
+  <!-- The Modal -->
+  <div id="orderModal14" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div class="form-container">
+        <form id="orderForm14">
+          <label for="product">Product:</label>
+          <input type="text" id="product" name="product" placeholder="Enter product name" required>
+    
+          <label for="quantity">Quantity:</label>
+          <input type="number" id="quantity" name="quantity" placeholder="Enter quantity" required>
+    
+          <label for="location">Location:</label>
+          <input type="text" id="location" name="location" placeholder="Enter your location" required>
+    
+          <label for="contact">Contact:</label>
+          <input type="text" id="contact" name="contact" placeholder="Enter your contact" required>
+    
+          <input type="submit" value="Submit Order">
+        </form>
+        
+        <div class="payment-message">
+          Payment is made on arrival of goods.
+        </div>
+    
+        <div class="success-message" id="successMessage">
+          Your order has been placed.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Get modal elements
+    var modal = document.getElementById('orderModal14');
+    var btn = document.getElementById('addToCartBtn14');
+    var span = document.getElementsByClassName('close')[0];
+    var orderForm = document.getElementById('orderForm14');
+    var successMessage = document.getElementById('successMessage');
+
+    // When the user clicks the button, open the modal
+    btn.onclick = function() {
+      modal.style.display = 'block';
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+      modal.style.display = 'none';
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = 'none';
+      }
+    }
+
+    // Add submit event listener to the form
+    orderForm.addEventListener('submit', function(event) {
+      // Prevent the default form submission
+      event.preventDefault();
+      
+      // Show the success message
+      successMessage.style.display = 'block';
+      
+      // Hide the form fields
+      orderForm.style.display = 'none';
+    });
+  </script>
+
+                </h6>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-4">
+          <div class="box">
+            <div class="img-box">
+              <img src="images/breadfruit.jpg" alt="">
+            </div>
+            <div class="detail-box">
+              <span class="rating">
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star-half-o" aria-hidden="true"></i>
+              </span>
+              <a href="">
+              Soursop
+              </a>
+              <div class="price_box">
+                <h6 class="price_heading">
+                  <span>Ugx.</span> 8,000
+                  <br>
+                   <!-- Trigger button -->
+  <button id="addToCartBtn13">Add to Cart</button>
+
+  <!-- The Modal -->
+  <div id="orderModal13" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div class="form-container">
+        <form id="orderForm13">
+          <label for="product">Product:</label>
+          <input type="text" id="product" name="product" placeholder="Enter product name" required>
+    
+          <label for="quantity">Quantity:</label>
+          <input type="number" id="quantity" name="quantity" placeholder="Enter quantity" required>
+    
+          <label for="location">Location:</label>
+          <input type="text" id="location" name="location" placeholder="Enter your location" required>
+    
+          <label for="contact">Contact:</label>
+          <input type="text" id="contact" name="contact" placeholder="Enter your contact" required>
+    
+          <input type="submit" value="Submit Order">
+        </form>
+        
+        <div class="payment-message">
+          Payment is made on arrival of goods.
+        </div>
+    
+        <div class="success-message" id="successMessage">
+          Your order has been placed.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Get modal elements
+    var modal = document.getElementById('orderModal13');
+    var btn = document.getElementById('addToCartBtn13');
+    var span = document.getElementsByClassName('close')[0];
+    var orderForm = document.getElementById('orderForm13');
+    var successMessage = document.getElementById('successMessage');
+
+    // When the user clicks the button, open the modal
+    btn.onclick = function() {
+      modal.style.display = 'block';
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+      modal.style.display = 'none';
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = 'none';
+      }
+    }
+
+    // Add submit event listener to the form
+    orderForm.addEventListener('submit', function(event) {
+      // Prevent the default form submission
+      event.preventDefault();
+      
+      // Show the success message
+      successMessage.style.display = 'block';
+      
+      // Hide the form fields
+      orderForm.style.display = 'none';
+    });
+  </script>>
+
+                </h6>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-4">
+          <div class="box">
+            <div class="img-box">
+              <img src="images/p5.png" alt="">
+            </div>
+            <div class="detail-box">
+              <span class="rating">
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star-half-o" aria-hidden="true"></i>
+              </span>
+              <a href="">
+              Banana Fingers
+              </a>
+              <div class="price_box">
+                <h6 class="price_heading">
+                  <span>Ugx.</span> 6,000
+                  <br>
+        <!-- Trigger button -->
+  <button id="addToCartBtn12">Add to Cart</button>
+
+  <!-- The Modal -->
+  <div id="orderModal12" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div class="form-container">
+        <form id="orderForm12">
+          <label for="product">Product:</label>
+          <input type="text" id="product" name="product" placeholder="Enter product name" required>
+    
+          <label for="quantity">Quantity:</label>
+          <input type="number" id="quantity" name="quantity" placeholder="Enter quantity" required>
+    
+          <label for="location">Location:</label>
+          <input type="text" id="location" name="location" placeholder="Enter your location" required>
+    
+          <label for="contact">Contact:</label>
+          <input type="text" id="contact" name="contact" placeholder="Enter your contact" required>
+    
+          <input type="submit" value="Submit Order">
+        </form>
+        
+        <div class="payment-message">
+          Payment is made on arrival of goods.
+        </div>
+    
+        <div class="success-message" id="successMessage">
+          Your order has been placed.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Get modal elements
+    var modal = document.getElementById('orderModal12');
+    var btn = document.getElementById('addToCartBtn12');
+    var span = document.getElementsByClassName('close')[0];
+    var orderForm = document.getElementById('orderForm12');
+    var successMessage = document.getElementById('successMessage');
+
+    // When the user clicks the button, open the modal
+    btn.onclick = function() {
+      modal.style.display = 'block';
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+      modal.style.display = 'none';
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = 'none';
+      }
+    }
+
+    // Add submit event listener to the form
+    orderForm.addEventListener('submit', function(event) {
+      // Prevent the default form submission
+      event.preventDefault();
+      
+      // Show the success message
+      successMessage.style.display = 'block';
+      
+      // Hide the form fields
+      orderForm.style.display = 'none';
+    });
+  </script>
+
+                </h6>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-4">
+          <div class="box">
+            <div class="img-box">
+              <img src="images/p5.png" alt="">
+            </div>
+            <div class="detail-box">
+              <span class="rating">
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star-half-o" aria-hidden="true"></i>
+              </span>
+              Bitter Berries (kg)
+              </a>
+              <div class="price_box">
+                <h6 class="price_heading">
+                  <span>Ugx.</span> 7,000
+                  <br>
+                   <!-- Trigger button -->
+  <button id="addToCartBtn">Add to Cart</button>
+
+  <!-- The Modal -->
+  <div id="orderModal11" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div class="form-container">
+        <form id="orderForm11">
+          <label for="product">Product:</label>
+          <input type="text" id="product" name="product" placeholder="Enter product name" required>
+    
+          <label for="quantity">Quantity:</label>
+          <input type="number" id="quantity" name="quantity" placeholder="Enter quantity" required>
+    
+          <label for="location">Location:</label>
+          <input type="text" id="location" name="location" placeholder="Enter your location" required>
+    
+          <label for="contact">Contact:</label>
+          <input type="text" id="contact" name="contact" placeholder="Enter your contact" required>
+    
+          <input type="submit" value="Submit Order">
+        </form>
+        
+        <div class="payment-message">
+          Payment is made on arrival of goods.
+        </div>
+    
+        <div class="success-message" id="successMessage">
+          Your order has been placed.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Get modal elements
+    var modal = document.getElementById('orderModal11');
+    var btn = document.getElementById('addToCartBtn11');
+    var span = document.getElementsByClassName('close')[0];
+    var orderForm = document.getElementById('orderForm11');
+    var successMessage = document.getElementById('successMessage');
+
+    // When the user clicks the button, open the modal
+    btn.onclick = function() {
+      modal.style.display = 'block';
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+      modal.style.display = 'none';
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = 'none';
+      }
+    }
+
+    // Add submit event listener to the form
+    orderForm.addEventListener('submit', function(event) {
+      // Prevent the default form submission
+      event.preventDefault();
+      
+      // Show the success message
+      successMessage.style.display = 'block';
+      
+      // Hide the form fields
+      orderForm.style.display = 'none';
+    });
+  </script>
+
+                </h6>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-4">
+          <div class="box">
+            <div class="img-box">
+              <img src="images/p5.png" alt="">
+            </div>
+            <div class="detail-box">
+              <span class="rating">
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star-half-o" aria-hidden="true"></i>
+              </span>
+              <a href="">
+              Guava (kg)
+              </a>
+              <div class="price_box">
+                <h6 class="price_heading">
+                  <span>Ugx.</span> 6,000
+                  <br>
+                   <!-- Trigger button -->
+  <button id="addToCartBtn10">Add to Cart</button>
+
+  <!-- The Modal -->
+  <div id="orderModal10" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div class="form-container">
+        <form id="orderForm10">
+          <label for="product">Product:</label>
+          <input type="text" id="product" name="product" placeholder="Enter product name" required>
+    
+          <label for="quantity">Quantity:</label>
+          <input type="number" id="quantity" name="quantity" placeholder="Enter quantity" required>
+    
+          <label for="location">Location:</label>
+          <input type="text" id="location" name="location" placeholder="Enter your location" required>
+    
+          <label for="contact">Contact:</label>
+          <input type="text" id="contact" name="contact" placeholder="Enter your contact" required>
+    
+          <input type="submit" value="Submit Order">
+        </form>
+        
+        <div class="payment-message">
+          Payment is made on arrival of goods.
+        </div>
+    
+        <div class="success-message" id="successMessage">
+          Your order has been placed.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Get modal elements
+    var modal = document.getElementById('orderModal10');
+    var btn = document.getElementById('addToCartBtn10');
+    var span = document.getElementsByClassName('close')[0];
+    var orderForm = document.getElementById('orderForm10');
+    var successMessage = document.getElementById('successMessage');
+
+    // When the user clicks the button, open the modal
+    btn.onclick = function() {
+      modal.style.display = 'block';
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+      modal.style.display = 'none';
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = 'none';
+      }
+    }
+
+    // Add submit event listener to the form
+    orderForm.addEventListener('submit', function(event) {
+      // Prevent the default form submission
+      event.preventDefault();
+      
+      // Show the success message
+      successMessage.style.display = 'block';
+      
+      // Hide the form fields
+      orderForm.style.display = 'none';
+    });
+  </script>
+
+                </h6>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-4">
+          <div class="box">
+            <div class="img-box">
+              <img src="images/p5.png" alt="">
+            </div>
+            <div class="detail-box">
+              <span class="rating">
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star-half-o" aria-hidden="true"></i>
+              </span>
+              <a href="">
+              Local Oranges (kg)
+              </a>
+              <div class="price_box">
+                <h6 class="price_heading">
+                  <span>Ugx.</span> 5,500
+                  <br>
+                   <!-- Trigger button -->
+  <button id="addToCartBtn9">Add to Cart</button>
+
+  <!-- The Modal -->
+  <div id="orderModal9" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div class="form-container">
+        <form id="orderForm9">
+          <label for="product">Product:</label>
+          <input type="text" id="product" name="product" placeholder="Enter product name" required>
+    
+          <label for="quantity">Quantity:</label>
+          <input type="number" id="quantity" name="quantity" placeholder="Enter quantity" required>
+    
+          <label for="location">Location:</label>
+          <input type="text" id="location" name="location" placeholder="Enter your location" required>
+    
+          <label for="contact">Contact:</label>
+          <input type="text" id="contact" name="contact" placeholder="Enter your contact" required>
+    
+          <input type="submit" value="Submit Order">
+        </form>
+        
+        <div class="payment-message">
+          Payment is made on arrival of goods.
+        </div>
+    
+        <div class="success-message" id="successMessage">
+          Your order has been placed.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Get modal elements
+    var modal = document.getElementById('orderModal9');
+    var btn = document.getElementById('addToCartBtn9');
+    var span = document.getElementsByClassName('close')[0];
+    var orderForm = document.getElementById('orderForm9');
+    var successMessage = document.getElementById('successMessage');
+
+    // When the user clicks the button, open the modal
+    btn.onclick = function() {
+      modal.style.display = 'block';
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+      modal.style.display = 'none';
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = 'none';
+      }
+    }
+
+    // Add submit event listener to the form
+    orderForm.addEventListener('submit', function(event) {
+      // Prevent the default form submission
+      event.preventDefault();
+      
+      // Show the success message
+      successMessage.style.display = 'block';
+      
+      // Hide the form fields
+      orderForm.style.display = 'none';
+    });
+  </script>
+
+                </h6>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-4">
+          <div class="box">
+            <div class="img-box">
+              <img src="images/p5.png" alt="">
+            </div>
+            <div class="detail-box">
+              <span class="rating">
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star-half-o" aria-hidden="true"></i>
+              </span>
+              <a href="">
+             Lime (kg)
+              </a>
+              <div class="price_box">
+                <h6 class="price_heading">
+                  <span>Ugx.</span> 8,000
+                  <br>
+                   <!-- Trigger button -->
+  <button id="addToCartBtn8">Add to Cart</button>
+
+  <!-- The Modal -->
+  <div id="orderModal8" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div class="form-container">
+        <form id="orderForm8">
+          <label for="product">Product:</label>
+          <input type="text" id="product" name="product" placeholder="Enter product name" required>
+    
+          <label for="quantity">Quantity:</label>
+          <input type="number" id="quantity" name="quantity" placeholder="Enter quantity" required>
+    
+          <label for="location">Location:</label>
+          <input type="text" id="location" name="location" placeholder="Enter your location" required>
+    
+          <label for="contact">Contact:</label>
+          <input type="text" id="contact" name="contact" placeholder="Enter your contact" required>
+    
+          <input type="submit" value="Submit Order">
+        </form>
+        
+        <div class="payment-message">
+          Payment is made on arrival of goods.
+        </div>
+    
+        <div class="success-message" id="successMessage">
+          Your order has been placed.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Get modal elements
+    var modal = document.getElementById('orderModal8');
+    var btn = document.getElementById('addToCartBtn8');
+    var span = document.getElementsByClassName('close')[0];
+    var orderForm = document.getElementById('orderForm8');
+    var successMessage = document.getElementById('successMessage');
+
+    // When the user clicks the button, open the modal
+    btn.onclick = function() {
+      modal.style.display = 'block';
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+      modal.style.display = 'none';
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = 'none';
+      }
+    }
+
+    // Add submit event listener to the form
+    orderForm.addEventListener('submit', function(event) {
+      // Prevent the default form submission
+      event.preventDefault();
+      
+      // Show the success message
+      successMessage.style.display = 'block';
+      
+      // Hide the form fields
+      orderForm.style.display = 'none';
+    });
+  </script>
+
+                </h6>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-4">
+          <div class="box">
+            <div class="img-box">
+              <img src="images/p5.png" alt="">
+            </div>
+            <div class="detail-box">
+              <span class="rating">
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star-half-o" aria-hidden="true"></i>
+              </span>
+              <a href="">
+              Local Lemon
+              </a>
+              <div class="price_box">
+                <h6 class="price_heading">
+                  <span>Ugx.</span> 6,000
+                  <br>
+                   <!-- Trigger button -->
+  <button id="addToCartBtn7">Add to Cart</button>
+
+  <!-- The Modal -->
+  <div id="orderModal7" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div class="form-container">
+        <form id="orderForm7">
+          <label for="product">Product:</label>
+          <input type="text" id="product" name="product" placeholder="Enter product name" required>
+    
+          <label for="quantity">Quantity:</label>
+          <input type="number" id="quantity" name="quantity" placeholder="Enter quantity" required>
+    
+          <label for="location">Location:</label>
+          <input type="text" id="location" name="location" placeholder="Enter your location" required>
+    
+          <label for="contact">Contact:</label>
+          <input type="text" id="contact" name="contact" placeholder="Enter your contact" required>
+    
+          <input type="submit" value="Submit Order">
+        </form>
+        
+        <div class="payment-message">
+          Payment is made on arrival of goods.
+        </div>
+    
+        <div class="success-message" id="successMessage">
+          Your order has been placed.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Get modal elements
+    var modal = document.getElementById('orderModal7');
+    var btn = document.getElementById('addToCartBtn7');
+    var span = document.getElementsByClassName('close')[0];
+    var orderForm = document.getElementById('orderForm7');
+    var successMessage = document.getElementById('successMessage');
+
+    // When the user clicks the button, open the modal
+    btn.onclick = function() {
+      modal.style.display = 'block';
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+      modal.style.display = 'none';
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = 'none';
+      }
+    }
+
+    // Add submit event listener to the form
+    orderForm.addEventListener('submit', function(event) {
+      // Prevent the default form submission
+      event.preventDefault();
+      
+      // Show the success message
+      successMessage.style.display = 'block';
+      
+      // Hide the form fields
+      orderForm.style.display = 'none';
+    });
+  </script>
+
+                </h6>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-4">
+          <div class="box">
+            <div class="img-box">
+              <img src="images/p5.png" alt="">
+            </div>
+            <div class="detail-box">
+              <span class="rating">
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star-half-o" aria-hidden="true"></i>
+              </span>
+              <a href="">
+              Local Tangerine
+              </a>
+              <div class="price_box">
+                <h6 class="price_heading">
+                  <span>Ugx.</span> 6,000
+                  <br>
+                   <!-- Trigger button -->
+  <button id="addToCartBtn6">Add to Cart</button>
+
+  <!-- The Modal -->
+  <div id="orderModal6" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div class="form-container">
+        <form id="orderForm6">
+          <label for="product">Product:</label>
+          <input type="text" id="product" name="product" placeholder="Enter product name" required>
+    
+          <label for="quantity">Quantity:</label>
+          <input type="number" id="quantity" name="quantity" placeholder="Enter quantity" required>
+    
+          <label for="location">Location:</label>
+          <input type="text" id="location" name="location" placeholder="Enter your location" required>
+    
+          <label for="contact">Contact:</label>
+          <input type="text" id="contact" name="contact" placeholder="Enter your contact" required>
+    
+          <input type="submit" value="Submit Order">
+        </form>
+        
+        <div class="payment-message">
+          Payment is made on arrival of goods.
+        </div>
+    
+        <div class="success-message" id="successMessage">
+          Your order has been placed.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Get modal elements
+    var modal = document.getElementById('orderModal6');
+    var btn = document.getElementById('addToCartBtn6');
+    var span = document.getElementsByClassName('close')[0];
+    var orderForm = document.getElementById('orderForm6');
+    var successMessage = document.getElementById('successMessage');
+
+    // When the user clicks the button, open the modal
+    btn.onclick = function() {
+      modal.style.display = 'block';
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+      modal.style.display = 'none';
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = 'none';
+      }
+    }
+
+    // Add submit event listener to the form
+    orderForm.addEventListener('submit', function(event) {
+      // Prevent the default form submission
+      event.preventDefault();
+      
+      // Show the success message
+      successMessage.style.display = 'block';
+      
+      // Hide the form fields
+      orderForm.style.display = 'none';
+    });
+  </script>
+
+                </h6>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-4">
+          <div class="box">
+            <div class="img-box">
+              <img src="images/p5.png" alt="">
+            </div>
+            <div class="detail-box">
+              <span class="rating">
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star-half-o" aria-hidden="true"></i>
+              </span>
+              <a href="">
+             Small Bananas
+              </a>
+              <div class="price_box">
+                <h6 class="price_heading">
+                  <span>Ugx.</span> 6,000
+                  <br>
+                   <!-- Trigger button -->
+  <button id="addToCartBtn5">Add to Cart</button>
+
+  <!-- The Modal -->
+  <div id="orderModal5" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div class="form-container">
+        <form id="orderForm5">
+          <label for="product">Product:</label>
+          <input type="text" id="product" name="product" placeholder="Enter product name" required>
+    
+          <label for="quantity">Quantity:</label>
+          <input type="number" id="quantity" name="quantity" placeholder="Enter quantity" required>
+    
+          <label for="location">Location:</label>
+          <input type="text" id="location" name="location" placeholder="Enter your location" required>
+    
+          <label for="contact">Contact:</label>
+          <input type="text" id="contact" name="contact" placeholder="Enter your contact" required>
+    
+          <input type="submit" value="Submit Order">
+        </form>
+        
+        <div class="payment-message">
+          Payment is made on arrival of goods.
+        </div>
+    
+        <div class="success-message" id="successMessage">
+          Your order has been placed.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Get modal elements
+    var modal = document.getElementById('orderModal5');
+    var btn = document.getElementById('addToCartBtn5');
+    var span = document.getElementsByClassName('close')[0];
+    var orderForm = document.getElementById('orderForm5');
+    var successMessage = document.getElementById('successMessage');
+
+    // When the user clicks the button, open the modal
+    btn.onclick = function() {
+      modal.style.display = 'block';
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+      modal.style.display = 'none';
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = 'none';
+      }
+    }
+
+    // Add submit event listener to the form
+    orderForm.addEventListener('submit', function(event) {
+      // Prevent the default form submission
+      event.preventDefault();
+      
+      // Show the success message
+      successMessage.style.display = 'block';
+      
+      // Hide the form fields
+      orderForm.style.display = 'none';
+    });
+  </script>
+
+                </h6>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-4">
+          <div class="box">
+            <div class="img-box">
+              <img src="images/zebra.jpg" alt="">
+            </div>
+            <div class="detail-box">
+              <span class="rating">
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star-half-o" aria-hidden="true"></i>
+              </span>
+              <a href="">
+              Water Mellon Zebra
+              </a>
+              <div class="price_box">
+                <h6 class="price_heading">
+                  <span>Ugx.</span> 10,000
+                  <br>
+                   <!-- Trigger button -->
+  <button id="addToCartBtn4">Add to Cart</button>
+
+  <!-- The Modal -->
+  <div id="orderModal4" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div class="form-container">
+        <form id="orderForm4">
+          <label for="product">Product:</label>
+          <input type="text" id="product" name="product" placeholder="Enter product name" required>
+    
+          <label for="quantity">Quantity:</label>
+          <input type="number" id="quantity" name="quantity" placeholder="Enter quantity" required>
+    
+          <label for="location">Location:</label>
+          <input type="text" id="location" name="location" placeholder="Enter your location" required>
+    
+          <label for="contact">Contact:</label>
+          <input type="text" id="contact" name="contact" placeholder="Enter your contact" required>
+    
+          <input type="submit" value="Submit Order">
+        </form>
+        
+        <div class="payment-message">
+          Payment is made on arrival of goods.
+        </div>
+    
+        <div class="success-message" id="successMessage">
+          Your order has been placed.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Get modal elements
+    var modal = document.getElementById('orderModal4');
+    var btn = document.getElementById('addToCartBtn4');
+    var span = document.getElementsByClassName('close')[0];
+    var orderForm = document.getElementById('orderForm4');
+    var successMessage = document.getElementById('successMessage');
+
+    // When the user clicks the button, open the modal
+    btn.onclick = function() {
+      modal.style.display = 'block';
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+      modal.style.display = 'none';
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = 'none';
+      }
+    }
+
+    // Add submit event listener to the form
+    orderForm.addEventListener('submit', function(event) {
+      // Prevent the default form submission
+      event.preventDefault();
+      
+      // Show the success message
+      successMessage.style.display = 'block';
+      
+      // Hide the form fields
+      orderForm.style.display = 'none';
+    });
+  </script>
+
+                </h6>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-4">
+          <div class="box">
+            <div class="img-box">
+              <img src="images/bananacluster.jpg" alt="">
+            </div>
+            <div class="detail-box">
+              <span class="rating">
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star-half-o" aria-hidden="true"></i>
+              </span>
+              <a href="">
+              Bananas Cluster
+              </a>
+              <div class="price_box">
+                <h6 class="price_heading">
+                  <span>Ugx.</span> 7,000
+                  <br>
+                   <!-- Trigger button -->
+  <button id="addToCartBtn2">Add to Cart</button>
+
+  <!-- The Modal -->
+  <div id="orderModal3" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div class="form-container">
+        <form id="orderForm3">
+          <label for="product">Product:</label>
+          <input type="text" id="product" name="product" placeholder="Enter product name" required>
+    
+          <label for="quantity">Quantity:</label>
+          <input type="number" id="quantity" name="quantity" placeholder="Enter quantity" required>
+    
+          <label for="location">Location:</label>
+          <input type="text" id="location" name="location" placeholder="Enter your location" required>
+    
+          <label for="contact">Contact:</label>
+          <input type="text" id="contact" name="contact" placeholder="Enter your contact" required>
+    
+          <input type="submit" value="Submit Order">
+        </form>
+        
+        <div class="payment-message">
+          Payment is made on arrival of goods.
+        </div>
+    
+        <div class="success-message" id="successMessage">
+          Your order has been placed.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Get modal elements
+    var modal = document.getElementById('orderModal3');
+    var btn = document.getElementById('addToCartBtn3');
+    var span = document.getElementsByClassName('close')[0];
+    var orderForm = document.getElementById('orderForm3');
+    var successMessage = document.getElementById('successMessage');
+
+    // When the user clicks the button, open the modal
+    btn.onclick = function() {
+      modal.style.display = 'block';
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+      modal.style.display = 'none';
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = 'none';
+      }
+    }
+
+    // Add submit event listener to the form
+    orderForm.addEventListener('submit', function(event) {
+      // Prevent the default form submission
+      event.preventDefault();
+      
+      // Show the success message
+      successMessage.style.display = 'block';
+      
+      // Hide the form fields
+      orderForm.style.display = 'none';
+    });
+  </script>
+
+                </h6>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-4">
+          <div class="box">
+            <div class="img-box">
+              <img src="images/dates.jpg" alt="">
+            </div>
+            <div class="detail-box">
+              <span class="rating">
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star-half-o" aria-hidden="true"></i>
+              </span>
+              <a href="">
+              Dates (Kg)
+              </a>
+              <div class="price_box">
+                <h6 class="price_heading">
+                  <span>Ugx.</span> 18,000
+                  <br>
+                  <!-- Trigger button -->
+  <button id="addToCartBtn2">Add to Cart</button>
+
+  <!-- The Modal -->
+  <div id="orderModal2" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div class="form-container">
+        <form id="orderForm2">
+          <label for="product">Product:</label>
+          <input type="text" id="product" name="product" placeholder="Enter product name" required>
+    
+          <label for="quantity">Quantity:</label>
+          <input type="number" id="quantity" name="quantity" placeholder="Enter quantity" required>
+    
+          <label for="location">Location:</label>
+          <input type="text" id="location" name="location" placeholder="Enter your location" required>
+    
+          <label for="contact">Contact:</label>
+          <input type="text" id="contact" name="contact" placeholder="Enter your contact" required>
+    
+          <input type="submit" value="Submit Order">
+        </form>
+        
+        <div class="payment-message">
+          Payment is made on arrival of goods.
+        </div>
+    
+        <div class="success-message" id="successMessage">
+          Your order has been placed.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Get modal elements
+    var modal = document.getElementById('orderModal2');
+    var btn = document.getElementById('addToCartBtn2');
+    var span = document.getElementsByClassName('close')[0];
+    var orderForm = document.getElementById('orderForm2');
+    var successMessage = document.getElementById('successMessage');
+
+    // When the user clicks the button, open the modal
+    btn.onclick = function() {
+      modal.style.display = 'block';
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+      modal.style.display = 'none';
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = 'none';
+      }
+    }
+
+    // Add submit event listener to the form
+    orderForm.addEventListener('submit', function(event) {
+      // Prevent the default form submission
+      event.preventDefault();
+      
+      // Show the success message
+      successMessage.style.display = 'block';
+      
+      // Hide the form fields
+      orderForm.style.display = 'none';
+    });
+  </script>
+
+                </h6>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-4">
+          <div class="box">
+            <div class="img-box">
+              <img src="images/cocoa.jpg" alt="">
+            </div>
+            <div class="detail-box">
+              <span class="rating">
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star-half-o" aria-hidden="true"></i>
+              </span>
+              <a href="">
+              Cocoa (Piece)
+              </a>
+              <div class="price_box">
+                <h6 class="price_heading">
+                  <span>Ugx.</span> 5,000
+                  <br>
+                   <!-- Trigger button -->
+  <button id="addToCartBtn1">Add to Cart</button>
+
+  <!-- The Modal -->
+  <div id="orderModal1" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div class="form-container">
+        <form id="orderForm1">
+          <label for="product">Product:</label>
+          <input type="text" id="product" name="product" placeholder="Enter product name" required>
+    
+          <label for="quantity">Quantity:</label>
+          <input type="number" id="quantity" name="quantity" placeholder="Enter quantity" required>
+    
+          <label for="location">Location:</label>
+          <input type="text" id="location" name="location" placeholder="Enter your location" required>
+    
+          <label for="contact">Contact:</label>
+          <input type="text" id="contact" name="contact" placeholder="Enter your contact" required>
+    
+          <input type="submit" value="Submit Order">
+        </form>
+        
+        <div class="payment-message">
+          Payment is made on arrival of goods.
+        </div>
+    
+        <div class="success-message" id="successMessage">
+          Your order has been placed.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Get modal elements
+    var modal = document.getElementById('orderModal1');
+    var btn = document.getElementById('addToCartBtn1');
+    var span = document.getElementsByClassName('close1')[0];
+    var orderForm = document.getElementById('orderForm1');
+    var successMessage = document.getElementById('successMessage');
+
+    // When the user clicks the button, open the modal
+    btn.onclick = function() {
+      modal.style.display = 'block';
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+      modal.style.display = 'none';
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = 'none';
+      }
+    }
+
+    // Add submit event listener to the form
+    orderForm.addEventListener('submit', function(event) {
+      // Prevent the default form submission
+      event.preventDefault();
+      
+      // Show the success message
+      successMessage.style.display = 'block';
+      
+      // Hide the form fields
+      orderForm.style.display = 'none';
+    });
+  </script>
+
+                </h6>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+  </section>
+
+  <!-- end product section -->
+
+  <!-- info section -->
+
+  <section class="info_section ">
+    <div class="info_container ">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-9">
+            <div class="info_contact ">
+              <div class="row">
+                <div class="col-md-3">
+                  <a href="#" class="link-box">
+                    <i class="fa fa-map-marker" aria-hidden="true"></i>
+                    <span>
+                      <a href="https://mapcarta.com/25737908/Directions" target="_blank"><p style="color: white;">Ntinda (U)</p></a>
+                    </span>
+                  </a>
+                </div>
+                <div class="col-md-5">
+                  <a href="#" class="link-box">
+                    <i class="fa fa-phone" aria-hidden="true"></i>
+                    <span>
+                      <a href="tel:12223334444" target="_blank"><p style="color: white;">Call us at +256-788117747</p></a>
+                    </span>
+                  </a>
+                </div>
+                <div class="col-md-4">
+                  <a href="#" class="link-box">
+                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                    <span>
+                      <a href="mailto:Carlgerald6@gmai" target="_blank"><p style="color: white;">Email Us</p></a>
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-5  col-lg-3 mx-auto">
+            <div class="info_form ">
+              <form action="#">
+                <input type="email" placeholder="Enter Your Email" />
+                <button>
+                  <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="info_logo">
+          <a class="navbar-brand" href="index.html">
+            <span>
+             GreenLeaf
+            </span>
+          </a>
+        </div>
+        <div class="social-box">
+          <!-- Link the Facebook icon to your Facebook page -->
+          <a href="https://www.facebook.com/profile.php?id=61558180586167" target="_blank">
+            <i class="fa fa-facebook" aria-hidden="true"></i>
+          </a>
+          </a>
+          <a href="">
+          <!-- Link the Instagram icon to your Instagram account -->
+          <a href="https://www.instagram.com/fresh_farm_strawberry" target="_blank">
+             <i class="fa fa-instagram" aria-hidden="true"></i>
+    </a>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end info section -->
+
+  <!-- footer section -->
+  <footer class="footer_section">
+    <div class="container">
+      <p>
+        &copy; <span id="displayYear"></span> All Rights Reserved By
+        <a href="https://html.design/">GreenLeaf</a>
+      </p>
+    </div>
+  </footer>
+  <!-- footer section -->
+
+  <!-- jQery -->
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <!-- bootstrap js -->
+  <script src="js/bootstrap.js"></script>
+  <!-- custom js -->
+  <script src="js/custom.js"></script>
+  <!-- Google Map -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap"></script>
+  <!-- End Google Map -->
+
+</body>
+
+</html>
